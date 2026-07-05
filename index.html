@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taylor Piggott</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14141a;
+    --surface: #1c1c24;
+    --surface-border: #2a2a35;
+    --text-primary: #e8e6e3;
+    --text-secondary: #8b8894;
+    --accent: #7c6fdb;
+    --accent-warm: #e0b45c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-warm);
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-warm);
+    display: inline-block;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+  }
+
+  .role {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .status-line {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 3rem;
+    display: inline-block;
+  }
+
+  .status-line .cursor {
+    display: inline-block;
+    width: 7px;
+    height: 1em;
+    background: var(--accent);
+    vertical-align: -0.15em;
+    animation: blink 1.1s steps(1) infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .status-line .cursor { animation: none; }
+  }
+
+  @keyframes blink { 50% { opacity: 0; } }
+
+  section { margin-bottom: 3.5rem; }
+
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--surface-border);
+  }
+
+  p { color: var(--text-secondary); max-width: 58ch; }
+  p + p { margin-top: 0.9rem; }
+
+  .building-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .building-item {
+    display: flex;
+    gap: 0.9rem;
+    align-items: baseline;
+  }
+
+  .building-item .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: rgba(124, 111, 219, 0.12);
+    border: 1px solid rgba(124, 111, 219, 0.3);
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  footer {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--surface-border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+  }
+
+  footer a { color: var(--text-secondary); }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="eyebrow">CURRENTLY IN TRANSITION</div>
+
+    <h1>Taylor Piggott</h1>
+    <div class="role">Retail Sales → Learning to Build Things</div>
+
+    <div class="status-line">
+      status: left the sales floor, learning to code<span class="cursor"></span>
+    </div>
+
+    <section>
+      <h2>Background</h2>
+      <p>
+        I started my professional journey as a chef, throwing myself into the craft with everything I had. Cooking was where I felt most alive, and over five years I was lucky enough to be recognised for it—earning awards like Rising Star, Chef of the Year, Apprentice of the Year, and a few others along the way. I moved up quickly, eventually becoming an Executive Sous Chef responsible for three kitchens and creating menus for each one.
+
+But as much as I loved the industry, I reached a point where I realised my family mattered more than the long hours and constant pressure. So I made the difficult decision to step away from the kitchen and start fresh. Now I work in sales, giving myself the chance to learn new skills, grow in a different direction, and build a life with more balance for the people who matter most.       </p>
+     
+    </section>
+
+    <section>
+      <h2>What I'm building right now</h2>
+      <div class="building-list">
+        <div class="building-item">
+          <span class="tag">Start</span>
+          <span>This portfolio page — first project, first look at HTML/CSS.</span>
+        </div>
+        <div class="building-item">
+          <span class="tag">-</span>
+          <span>learning JavaScript basics</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="mailto:taylorpiggott6@gmail.com">email</a>
+      <a href="#">github</a>
+    </footer>
+
+  </div>
+</body>
+</html>
